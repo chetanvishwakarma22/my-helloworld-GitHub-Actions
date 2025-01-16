@@ -53,13 +53,13 @@ jobs:
       - name: Run SonarQube analysis
      #   uses: SonarSource/sonarcloud-github-action@v1
        #  with:
-      #    sonar-token: 4986d8095caf67afa60b6c4c253e8c18e978bf7b
+      #    sonar-token: f139381a6a86705ac5461930dc08f10212689ea2
       #    sonar-host-url: 'https://sonarcloud.io'
         run: |
           mvn clean verify sonar:sonar \
-            -Dsonar.organization=assignment-vik \
+            -Dsonar.organization=chetanvishwakarma22 \
             -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.projectKey=assignment-vik_assignment-vik \
+            -Dsonar.projectKey=chetanvishwakarma22_new_one- \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
   upload_artifact:
