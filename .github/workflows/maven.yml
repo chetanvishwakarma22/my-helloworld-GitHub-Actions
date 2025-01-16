@@ -3,11 +3,11 @@ name: Java CI with Maven, SonarQube, and Production Deployment
 on:
   push:
     branches:
-      - master
+      - main
       - 'feature/*'
   pull_request:
     branches:
-      - master
+      - main
       - 'feature/*'
   workflow_dispatch:
     inputs:
@@ -110,7 +110,7 @@ jobs:
           elif [ "${{ matrix.node }}" == "production" ]; then
             sudo chown -R ubuntu:ubuntu /opt
             cd /opt/apache-tomcat-10.1.34/webapps/
-            curl -L -u "${{ secrets.JFROG1_USERNAME }}:${{ secrets.JFROG1_API_KEY }}" -O "http://44.222.253.17:8082/artifactory/assignment-vik-libs-snapshot/my-helloworld-1.0-snapshot1.war"
+            curl -L -u "${{ secrets.JFROG1_USERNAME }}:${{ secrets.JFROG1_API_KEY }}" -O "http://13.232.211.223:8082/artifactory/hello-world-war-libs-snapshot/my-helloworld-1.0-snapshot1.war"
              
           else
               echo "Skipping production deployment:Node is not matching"
