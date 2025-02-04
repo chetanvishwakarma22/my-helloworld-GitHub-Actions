@@ -6,23 +6,8 @@
 
     <groupId>com.example</groupId>
     <artifactId>my-helloworld</artifactId>
-    <version>1.0-snapshot</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-
-    <properties>
-  <sonar.organization>assignment-vik</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-  <sonar.projectKey>assignment-vik</sonar.projectKey>
-    </properties>
-
-<distributionManagement>
-    <snapshotRepository>
-        <id>assignment-vik</id>
-        <name>assignment-vik-libs-snapshot</name>
-        <url>http://44.222.253.17:8081/artifactory/assignment-vik-libs-snapshot</url>
-    </snapshotRepository>
-</distributionManagement>
-
 
     <dependencies>
         <!-- Servlet API Dependency -->
@@ -81,7 +66,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>1.8</source> <!-- Or change to 11 for Java 11  -->
+                    <source>1.8</source> <!-- Or change to 11 for Java 11 -->
                     <target>1.8</target> <!-- Or change to 11 for Java 11 -->
                 </configuration>
             </plugin>
